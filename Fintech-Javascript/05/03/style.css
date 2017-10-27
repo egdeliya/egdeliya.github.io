@@ -1,0 +1,54 @@
+body{
+    margin: auto;
+}
+
+.main-tag-container {
+    width: 829px;
+    height: 132px;
+    border-radius: 6px;
+    padding: 18px;
+    border: solid 1px #dddfe0;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+
+.tag-container {
+    height: 42px;
+    border-radius: 6px;
+    border: none;
+    display: flex;
+    max-width: 300px;
+    white-space: nowrap;
+    margin-right: 12px;
+    margin-bottom: 12px;
+    padding: 11px;
+    flex-direction: row;
+    background-color: #eef2f7;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.tag-content {
+    font-family: 'Roboto', Arial, sans-serif;
+    height: 15px;
+    font-size: 13px;
+    max-width: 270px;
+    display: block;
+    overflow: hidden;
+    margin-right: 11px;
+    color: #333333;
+}
+
+.Group-Copy {
+    width: 11px;
+    height: 11px;
+    object-fit: contain;
+}
+
+.task-image {
+    margin: auto 0;
+}
