@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@headers-text-color: #ffffff;
+@main-color: #ffdd2d;
+
+body {
+  margin: auto;
+  max-width: 1080px;
+}
+
+/* --------------- navigation bar code ------------- */
+.nav {
+  margin: auto;
+  width: 1080px;
+  max-width: 1080px;
+  height: 65px;
+  padding-left: 126px;
+  padding-right: 126px;
+  background-color: #3e4757;
+  font-family: Roboto, Arial, sans-serif;
+  text-transform: uppercase;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+
+.nav__item {
+  display: flex;
+  align-items: center;
+  border-bottom: 3px solid #3e4757;
+  transition-property: border-bottom-color;
+  transition-duration: 2s;
+  &:hover {
+    border-bottom-color: @main-color;
+  }
+  a {
+    display: flex;
+    text-align: center;
+    height: 15px;
+    font-size: 13px;
+    white-space: nowrap;
+    font-family: Roboto, Arial, sans-serif;
+    letter-spacing: 0.9px;
+    align-items: center;
+    color: @headers-text-color;
+    text-decoration: none;
+  }
+}
+
+/* ------------- baner code -------------- */
+.baner{
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  width: 1080px;
+  height: 413px;
+  background-image: linear-gradient(to right, #1489e7, #003e82);
+}
+
+.flex-container {
+  margin-left: 14px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
+  justify-content: flex-start;
+}
+
+.header-container {
+  width: 342px;
+  height: 100px;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 50px;
+  font-weight: 100;
+  line-height: 1;
+  color: white;
+  order: 0;
+  display: flex;
+  text-transform: none;
+  margin-top: 91px;
+  /*margin-bottom: 222px;*/
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.second-block-container {
+  width: 326px;
+  height: 48px;
+  display: flex;
+  order: 1;
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.second-block-content{
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ffffff;
+  text-transform: none;
+  margin-top: 209px;
+}
+
+.last-block-container {
+  width: 212px;
+  height: 62px;
+  align-items: center;
+  display: flex;
+  border-radius: 6px;
+  background-color: @main-color;
+  order: 2;
+  margin-top: 277px;
+  /*margin-bottom: 74px;*/
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.last-block-content {
+  width: 212px;
+  height: 24px;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.41;
+  text-align: center;
+  color: #333333;
+}
+
+.card-container {
+  float: left;
+  width: 542px;
+  height: 413px;
+  position: relative;
+  object-fit: contain;
+  overflow: hidden;
+  background-image: url(https://github.com/egdeliya/Fintech-Javascript-3/blob/lesson-05/05/02/img/cards.png);
+}
+
+/* .Cards {
+    min-width: 542px;
+    min-height: 413px;
+    position:absolute;
+    right:0px;
+    bottom: -12%;
+    overflow: hidden;
+} */
+
