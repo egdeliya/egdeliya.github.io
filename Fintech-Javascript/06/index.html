@@ -3,12 +3,24 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Задание 5.1</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" media="(max-width:640px)" href="mobile.css" />
     <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- <link rel="stylesheet/less" type="text/css" href="style.less"> -->
+    <!--<link rel="stylesheet/less" type="text/css" href="style.less">-->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,400,300&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
 </head>
 <body>
+<!-- header -->
+<div class="header">
+    <img src="img/header-logo.svg"
+         class="header-logo-svg">
+    <img src="img/logo-mobile.svg"
+         class="logo-mobile-svg">
+    <span>8 800 555-11-22</span>
+    <img src="img/menu.svg"
+         class="menu-svg">
+</div>
 <!-- menu -->
 <ul class="nav">
     <li class="nav__item"><a href="#карты">карты</a></li>
@@ -29,7 +41,7 @@
 </div>
 <!-- tags -->
 <div class="tags">
-    <h2 class="tags__title">Любые категории&nbsp;платежей</h2>
+    <h2 class="tags__title">Любые категории платежей</h2>
     <div class="tags__container">
       <span class="tags__content">
           <text>Кафе</text>
@@ -98,67 +110,75 @@
       </span>
     </div>
 </div>
-<!-- form code -->
-<!-- form code -->
+<!-- form -->
 <div class="form">
     <h2 class="form__title">Заполните несколько простых полей</h2>
-    <form class="form__content">
-        <div>
-            <input type="text" class="form__input"/>
-            <span class="form__label">ФИО</span>
+    <form class="form__items">
+        <div class="form__item">
+            <input type="text" class="form__item-input"/>
+            <span class="form__item-label">ФИО</span>
         </div>
-        <div>
-            <input type="text" class="form__input"/>
-            <span class="form__label">Город проживания</span>
-        </div>
-        <!-- <div class="form-element" style="background: none; border: solid 1px #d0011b; margin-bottom: 11px">
-            <div class="content-container">
-                <label class="form-label" for="city">Город проживания</label>
-                <input class="form-input-field" type="text" id="city" name="city"
-                       contenteditable="false" placeholder="Город проживания">
-            </div>
-            <img src="img/exclamation_point.svg"
+        <div class="form__item form__item_active">
+            <input type="text" class="form__item-input"/>
+            <span class="form__item-label">Город проживания</span>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="24" viewBox="0 0 23 24"
                  class="exclamation-svg">
-        </div> -->
-        <!-- <label class="message-label">Для заполнения этого поля не допустимо использовать буквы латинского алфавита</label>
-        <div class="form-element">
-            <div class="content-container">
-                <label class="form-label"  for="phone">Мобильный телефон</label>
-                <input class="form-input-field" type="tel" id="phone" name="phone"
-                       contenteditable="false" placeholder="Мобильный телефон">
-            </div>
+                <defs>
+                    <path id="a" d="M3.579 3.816c-2.21 2.21-3.316 4.91-3.316 8.1 0 3.095 1.105 5.748 3.316 7.957 2.21 2.243 4.911 3.364 8.1 3.364 3.095 0 5.747-1.12 7.958-3.364C21.88 17.663 23 15.011 23 11.915c0-3.19-1.12-5.889-3.363-8.1C17.426 1.606 14.774.5 11.68.5 8.49.5 5.79 1.605 3.579 3.816z"/>
+                    <mask id="b" width="22.737" height="22.737" x="0" y="0" fill="#fff">
+                        <use xlink:href="#a"/>
+                    </mask>
+                </defs>
+                <g fill="none" fill-rule="evenodd" stroke="#DD5656">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.75 16.379v.379"/>
+                    <use stroke-width="3" mask="url(#b)" xlink:href="#a"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.75 6.578v7.157"/>
+                </g>
+            </svg>
         </div>
-        <div class="form-element">
-            <div class="content-container">
-                <label class="form-label" for="email">Электронная почта</label>
-                <input class="form-input-field" type="email" id="email" name="email"
-                       contenteditable="False" placeholder="Электронная почта">
-            </div>
-            <img src="img/question-mark.svg"
+        <label class="form__error-label">Для заполнения этого поля не допустимо использовать буквы латинского алфавита</label>
+        <div class="form__item">
+            <input type="tel" class="form__item-input"/>
+            <span class="form__item-label">Мобильный телефон</span>
+        </div>
+        <div class="form__item">
+            <input type="email" class="form__item-input"/>
+            <span class="form__item-label">Электронная почта</span>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="24" viewBox="0 0 23 24"
                  class="question-svg">
+                <defs>
+                    <path id="a" d="M3.579 3.816c-2.21 2.21-3.316 4.91-3.316 8.1 0 3.095 1.105 5.748 3.316 7.957 2.21 2.243 4.911 3.364 8.1 3.364 3.095 0 5.747-1.12 7.958-3.364C21.88 17.663 23 15.011 23 11.915c0-3.19-1.12-5.889-3.363-8.1C17.426 1.606 14.774.5 11.68.5 8.49.5 5.79 1.605 3.579 3.816z"/>
+                    <mask id="b" width="22.737" height="22.737" x="0" y="0" fill="#fff">
+                        <use xlink:href="#a"/>
+                    </mask>
+                </defs>
+                <g fill="none" fill-rule="evenodd" stroke="#74A3C7">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 8.8c.095-.347.3-.693.616-1.042.506-.505 1.137-.758 1.895-.758.726 0 1.342.253 1.847.758.379.349.568.869.568 1.564 0 .473-.094.837-.284 1.089-.158.315-.489.696-.994 1.136-.916.728-1.343 1.485-1.28 2.274m0 2.558v.379"/>
+                    <use stroke-width="3" mask="url(#b)" xlink:href="#a"/>
+                </g>
+            </svg>
+            <!-- <block class="form__info-block">
+              Ваши данные замаскированы в целях безопасности. Для изменения информации с вами свяжется оператор колл-центра.
+            </block> -->
         </div>
-        <div class="form-element" style="background: none">
-            <div class="choose-container">
-                Выберите это или другое
-            </div>
-        </div>
-        <div class="blocks-element" style="background: none">
-            <div class="block-container">
-                <div class="block-container-text">Это</div>
-                <img src="img/radio-active.svg"
-                     class="radio-active-svg">
-            </div>
-            <div class="block-container" style="margin-left: auto">
-                <div class="block-container-text">Другое</div>
-                <img src="img/radio.svg"
-                     class="radio-svg">
-            </div>
-        </div> -->
+        <block class="form__radio-items-title">
+            Выберите это или другое
+        </block>
+        <block class="radio-items-wrapper">
+            <block class="form__item-radio">
+                <input type="radio" id="radio-this"/>
+                <label for="radio-this">Это</label>
+            </block>
+            <block class="form__item-radio">
+                <input type="radio" id="radio-other"/>
+                <label for="radio-other">Другое</label>
+            </block>
+        </block>
     </form>
-    <form class="last-block-container">
-        <text class="last-block-content">Оформить заявку</text>
-    </form>
+    <button type="button">Оформить заявку</button>
 </div>
+
+
 <!--<img src="./task.png" alt="" class="task-image">-->
 <!--<img src="./task.png" alt="">-->
 </body>
