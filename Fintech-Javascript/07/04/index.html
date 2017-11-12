@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet/less" type="text/css" href="./main.less" />
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.2/less.min.js" ></script>
+    <title>Задание 7.4</title>
+</head>
+<body>
+<h1>Скроллинг с подгрузкой</h1>
+    <div class="container">
+        <ul class="list"></ul>
+    </div>
+    <template id="repoTemplate" style="display: none">
+        <li class="list__item repo">
+            <div class="repo-field-wrapper">
+                <label for="repo__name"><b>Имя репозитория:</b></label>
+                <div class="repo__name block" id="repo__name"></div>
+            </div>
+            <div class="repo-field-wrapper">
+                <label for="repo__description"><b>Описание:</b></label>
+                <div class="repo__description block" id="repo__description"></div>
+            </div>
+            <div class="repo-field-wrapper">
+                <label for="repo__html_url"><b>Ссылка на репозиторий:</b></label>
+                <a class="repo__html_url block" href="" id="repo__html_url"></a>
+            </div>
+            <div class="repo-field-wrapper">
+                <label for="repo__created_at"><b>Дата создания:</b></label>
+                <div class="repo__created_at block" id="repo__created_at"></div>
+            </div>
+            <div  class="repo-field-wrapper">
+                <label for="repo__updated_at"><b>Дата последнего коммита:</b></label>
+                <div class="repo__updated_at block" id="repo__updated_at"></div>
+            </div>
+        </li>
+    </template>
+<script src="main.js"></script>
+</body>
+</html>

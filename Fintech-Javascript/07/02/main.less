@@ -1,0 +1,42 @@
+@text-color-dark: #333;
+@main-color: rgb(234, 246, 255);
+
+.check-list {
+  list-style-type: none;
+}
+
+.content-wrapper {
+  margin: auto;
+  max-width: 1000px;
+  text-align: center;
+}
+
+.btn-click-me {
+  border: none;
+  height: 62px;
+  width: 200px;
+  border-radius: 6px;
+  padding: 5%;
+  box-sizing: border-box;
+  background-color: @main-color;
+  color: @text-color-dark;
+  cursor: pointer;
+  outline: none;
+
+  &:hover {
+    background: darken(@main-color, 10%);
+  }
+
+  &:active {
+    background: saturate(@main-color, 20%);
+    color: #777;
+  }
+}
+
+.check-list__item {
+  height: 30px;
+  max-width: 400px;
+  padding: 3px;
+  background-color: @main-color;
+}
+
