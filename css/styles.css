@@ -1,0 +1,222 @@
+:root {
+    --black: #262626;
+    --orange: #F2622E;
+    --seablue: #592EF2;
+    /* <---- old purple from adobe */
+    --oldpurple: #7A36D9;
+    --purple: #7E00FC;
+    --fucsia: #8D41BF;
+
+    --limegreen: #EAF207;
+    --brightgreen: #8DF244;
+    --grass: #027353;
+
+    --golang: #027D9C;
+
+    --dkblue: #0d314b;
+    --plum: #4b0d49;
+    --hotmag: #ff17e4;
+    --magenta: #e310cb;
+    --aqua: #86fbfb;
+    --white: #f7f8fa;
+
+    --font-size: 1.3rem;
+    --mono: "Montserrat Alternates", monospace;
+    --sans: Montserrat, sans-serif;
+}
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: var(--sans);
+
+    background-color: var(--black);
+    color: var(--white);
+    font-size: var(--font-size);
+    font-weight: normal;
+}
+h1, h2, h3 {
+    /*   border: 1px solid yellow; */
+    margin: 0;
+    /*   font-weight: normal; */
+}
+h1 {
+    font-weight: bold;
+}
+a {
+    color: var(--purple);
+}
+a:hover {
+    color: var(--fucsia);
+    text-decoration: none;
+}
+
+/* navbar */
+nav {
+    font-family: var(--mono);
+    font-size: 80%;
+    padding: 1rem;
+}
+nav h1 a {
+    font-family: var(--sans);
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    /*  applies to vertical space  */
+    align-items: center;
+    gap: 2rem;
+}
+nav ul li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+/* [] - attribute selector */
+nav [class*="fa-"] {
+    font-size: 150%;
+    color: var(--orange);
+}
+nav .brand-icon {
+    /*   border: 1px solid red; */
+    font-size: 100%;
+    /*   margin-right: 0.3rem; */
+
+    animation: brandrotate 8s ease-in-out infinite;
+}
+nav a {
+    text-decoration: none;
+    color: var(--white);
+
+    display: block;
+    /*   border: 1px solid yellow; */
+}
+nav a:hover,
+nav [class*="fa-"]:hover {
+    color: var(--fucsia);
+}
+
+.button {
+    background-color: var(--seablue);
+    padding: 0.3rem;
+    border-radius: 4px;
+}
+.button:hover {
+    color: var(--white);
+
+    background-color: var(--purple);
+}
+
+/* intro styles */
+#intro {
+    padding-borrom: 10rem;
+}
+#intro p {
+    font-size: 1rem;
+    /* don't use units of measurments, then it will be a proportion */
+    line-height: 1.5;
+}
+#intro .name {
+    font-family: var(--mono);
+}
+.name span {
+    font-family: var(--sans);
+    font-size: 4rem;
+    color: var(--orange);
+    letter-spacing: -0.1rem;
+
+    display: block;
+}
+
+#intro h2 {
+    font-size: 4rem;
+    font-weight: normal;
+}
+#intro .tech {
+    color: var(--seablue);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+#intro .square-br {
+    color: var(--seablue);
+    font-weight: bold;
+}
+
+/* contact styles */
+#contact {
+    text-align: center;
+    font-size: 1rem;
+
+    margin: 0 auto;
+    width: 400px;
+
+    padding: 3rem 0;
+}
+#contact p:last-child {
+    /*   border: 1px solid yellow; */
+    margin-top: 3rem;
+}
+
+/* footer styles */
+footer {
+    /*   border: 1px solid orange; */
+
+    width: 400px;
+
+    margin: 0 auto;
+    padding: 2rem 0;
+
+    text-align: center;
+    font-size: 1rem;
+}
+footer ul {
+    /*   border: 1px solid red; */
+    list-style-type: none;
+
+    padding: 0;
+    margin: 0.5rem 0 1.5rem 0;
+
+    font-size: 2rem;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+footer a {
+    /*   border: 1px solid red; */
+}
+
+@keyframes brandrotate {
+    from {
+        rotate: 0deg;
+    }
+    to {
+        rotate: 360deg;
+    }
+}
+
+@media (min-width: 850px) {
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    nav ul li:first-child {
+        flex-basis: auto;
+        text-align: left;
+        /* takes all extra spacing from sides and puts it between first element and the rest  */
+        margin-right: auto;
+    }
+}
