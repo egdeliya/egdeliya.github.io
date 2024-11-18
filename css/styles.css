@@ -1,5 +1,6 @@
 :root {
     --black: #262626;
+    --black: #333333;
     --orange: #F2622E;
     --darkorange: #731702;
 
@@ -45,7 +46,9 @@ body {
     font-family: var(--sans);
 
     background-color: var(--black);
+    background-color: var(--white);
     color: var(--white);
+    color: var(--black);
     font-size: var(--font-size);
     font-weight: normal;
 }
@@ -58,12 +61,10 @@ h1 {
     font-weight: bold;
 }
 a {
-    color: var(--royalblue);
+    color: var(--white);
 }
 a:hover {
-    color: var(--purple);
-    color: var(--royalblue);
-    color: var(--lightroyalblue);
+    color: var(--orange);
     text-decoration: none;
 }
 img {
@@ -72,12 +73,10 @@ img {
 
 /* ------ background-color divs ------ */
 .section-contacts {
-    background-color: var(--lightpurple);
-    /*background-color: var(--darkblue);*/
-    background-color: var(--darkpurple);
+    background-color: var(--white);
 }
 .section-projects {
-    background-color: var(--darkfuchsia);
+    background-color: var(--white);
 }
 .gradient {
     background: linear-gradient(90deg, rgba(89,46,242,1) 0%, rgba(242,98,46,1) 100%);
@@ -112,34 +111,33 @@ nav ul li:first-child {
 /* [] - attribute selector */
 nav [class*="fa-"] {
     font-size: 150%;
-    color: var(--orange);
+    color: var(--black);
 }
 nav .brand-icon {
     /*   border: 1px solid red; */
     font-size: 100%;
-    /*   margin-right: 0.3rem; */
+    color: var(--orange);
 
-    animation: brandrotate 8s ease-in-out infinite;
+    /*animation: brandrotate 8s ease-in-out infinite;*/
 }
 nav a {
     text-decoration: none;
-    color: var(--white);
+    color: var(--black);
 
     display: block;
-    /*   border: 1px solid yellow; */
 }
 nav a:hover,
 nav [class*="fa-"]:hover {
-    color: var(--purple);
-    color: var(--lightroyalblue);
+    color: var(--orange);
 }
 
 .button {
     text-decoration: none;
     color: var(--white);
+
     font-family: var(--mono);
 
-    background-color: var(--royalblue);
+    background-color: var(--black);
     padding: 0.6rem;
 
     border-radius: 4px;
@@ -147,8 +145,8 @@ nav [class*="fa-"]:hover {
 .button:hover {
     color: var(--white);
 
-    background-color: var(--purple);
-    background-color: var(--lightroyalblue);
+    background-color: var(--orange);
+    text-decoration: none;
 }
 
 /* ------ intro styles ------ */
@@ -169,19 +167,15 @@ nav [class*="fa-"]:hover {
 .name span {
     font-family: var(--sans);
     font-size: 4rem;
-    color: var(--orange);
-    /*letter-spacing: -0.1rem;*/
 
     display: block;
+
+    margin-bottom: 3rem;
 }
 
 #intro h2 {
     font-size: 4rem;
     font-weight: normal;
-}
-#intro .square-br {
-    color: var(--royalblue);
-    font-weight: bold;
 }
 
 /* ------ projects section ------ */
@@ -196,7 +190,7 @@ nav [class*="fa-"]:hover {
     margin-bottom: calc(2.5rem * 1.5);
 }
 #projects h3 {
-    color: var(--orange);
+    color: var(--black);
 }
 #projects h4 {
     font-size: 1.2rem;
@@ -205,13 +199,17 @@ nav [class*="fa-"]:hover {
     margin: 0;
 }
 .blackbox {
-    background-color: var(--black);
+    background-color: rgba(0, 0, 0, .5);
     padding: 1rem;
     border-radius: 10px;
 
     color: var(--white);
+
     font-size: 1.4rem;
     line-height: 1.5;
+}
+#projects a {
+    font-weight: bold;
 }
 #projects ul {
     margin: 0;
@@ -230,8 +228,8 @@ nav [class*="fa-"]:hover {
     margin: 2rem 0 4rem 0;
     padding: 1rem;
 
-    border-left: 1px solid var(--orange);
-    border-top: 1px solid var(--orange);
+    /*border-left: 1px solid var(--orange);*/
+    /*border-top: 1px solid var(--orange);*/
     border-radius: 25px;
 }
 
@@ -269,16 +267,23 @@ footer ul {
     padding: 0;
     margin: 0.5rem 0 1.5rem 0;
 
-    font-size: 3rem;
+    font-size: 2rem;
 
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     gap: 2rem;
 }
+footer [class*="fa-"] {
+    color: var(--black);
+}
 footer [class*="fa-"]:hover {
-    transform: scale(105%);
+    /*transform: scale(105%);*/
     /*   border: 1px solid red; */
+}
+
+.about img {
+    width: 20rem;
 }
 
 @keyframes brandrotate {
