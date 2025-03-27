@@ -259,21 +259,12 @@ footer [class*="fa-"] {
     color: var(--black);
 }
 footer [class*="fa-"]:hover {
-    /*transform: scale(105%);*/
+    color: var(--orange);
     /*   border: 1px solid red; */
 }
 
 .about img {
     width: 20rem;
-}
-
-@keyframes brandrotate {
-    from {
-        rotate: 0deg;
-    }
-    to {
-        rotate: 360deg;
-    }
 }
 
 @media (min-width: 550px) {
