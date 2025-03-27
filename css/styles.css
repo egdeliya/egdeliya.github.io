@@ -1,31 +1,8 @@
 :root {
-    --black: #262626;
     --black: #333333;
+    --white: #F7F7F7;
     --orange: #F2622E;
     --darkorange: #731702;
-
-    --royalblue: #592EF2;
-    --lightroyalblue: #6137ff;
-    --seabluehue: #6f39ff;
-
-    /* <---- old purple from adobe */
-    --purple: #7E00FC;
-    /*--darkpurple: #13133F;*/
-    --darkpurple: #4c2187;
-
-    --oldpurple: #7A36D9;
-    --lightpurple: #8D41BF;
-
-    --darkfuchsia: #550455;
-
-    --golang: #027D9C;
-
-    --dkblue: #0d314b;
-    --plum: #4b0d49;
-    --hotmag: #ff17e4;
-    --magenta: #e310cb;
-    --aqua: #86fbfb;
-    --white: #F7F7F7;
 
     --font-size: 1.5rem;
     --mono: "Montserrat Alternates", monospace;
@@ -45,9 +22,7 @@ body {
 
     font-family: var(--sans);
 
-    background-color: var(--black);
     background-color: var(--white);
-    color: var(--white);
     color: var(--black);
     font-size: var(--font-size);
     font-weight: normal;
@@ -92,6 +67,9 @@ nav {
 nav h1 a {
     font-family: var(--sans);
 }
+nav h1 a:hover {
+    text-decoration: none;
+}
 nav ul {
     list-style-type: none;
     margin: 0;
@@ -126,7 +104,10 @@ nav a {
 
     display: block;
 }
-nav a:hover,
+nav a:hover {
+    text-decoration: underline;
+    color: var(--orange);
+}
 nav [class*="fa-"]:hover {
     color: var(--orange);
 }
@@ -228,8 +209,8 @@ nav [class*="fa-"]:hover {
     margin: 2rem 0 4rem 0;
     padding: 1rem;
 
-    /*border-left: 1px solid var(--orange);*/
-    /*border-top: 1px solid var(--orange);*/
+    border-top: 1px solid var(--orange);
+    border-left: 1px solid rgba(0, 0, 0, .5);
     border-radius: 25px;
 }
 
@@ -322,6 +303,9 @@ footer [class*="fa-"]:hover {
         grid-column: 1/7;
 
         order: 1;
+        text-align: left;
+    }
+    .description {
         text-align: left;
     }
     #projects article:nth-child(odd) img {
