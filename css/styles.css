@@ -1,15 +1,21 @@
 :root {
     --black: #262626;
     --orange: #F2622E;
-    --seablue: #592EF2;
-    /* <---- old purple from adobe */
-    --oldpurple: #7A36D9;
-    --purple: #7E00FC;
-    --fucsia: #8D41BF;
+    --darkorange: #731702;
 
-    --limegreen: #EAF207;
-    --brightgreen: #8DF244;
-    --grass: #027353;
+    --royalblue: #592EF2;
+    --lightroyalblue: #6137ff;
+    --seabluehue: #6f39ff;
+
+    /* <---- old purple from adobe */
+    --purple: #7E00FC;
+    /*--darkpurple: #13133F;*/
+    --darkpurple: #4c2187;
+
+    --oldpurple: #7A36D9;
+    --lightpurple: #8D41BF;
+
+    --darkfuchsia: #550455;
 
     --golang: #027D9C;
 
@@ -18,9 +24,9 @@
     --hotmag: #ff17e4;
     --magenta: #e310cb;
     --aqua: #86fbfb;
-    --white: #f7f8fa;
+    --white: #F7F7F7;
 
-    --font-size: 1.3rem;
+    --font-size: 1.5rem;
     --mono: "Montserrat Alternates", monospace;
     --sans: Montserrat, sans-serif;
 }
@@ -52,18 +58,37 @@ h1 {
     font-weight: bold;
 }
 a {
-    color: var(--seablue);
+    color: var(--royalblue);
 }
 a:hover {
     color: var(--purple);
+    color: var(--royalblue);
+    color: var(--lightroyalblue);
     text-decoration: none;
 }
+img {
+    width: 100%;
+}
 
-/* navbar */
+/* ------ background-color divs ------ */
+.section-contacts {
+    background-color: var(--lightpurple);
+    /*background-color: var(--darkblue);*/
+    background-color: var(--darkpurple);
+}
+.section-projects {
+    background-color: var(--darkfuchsia);
+}
+.gradient {
+    background: linear-gradient(90deg, rgba(89,46,242,1) 0%, rgba(242,98,46,1) 100%);
+    height: 2px;
+}
+
+/* ------ navbar ------ */
 nav {
     font-family: var(--mono);
     font-size: 80%;
-    padding: 1rem;
+    padding: 4rem 1rem;
 }
 nav h1 a {
     font-family: var(--sans);
@@ -106,39 +131,46 @@ nav a {
 nav a:hover,
 nav [class*="fa-"]:hover {
     color: var(--purple);
+    color: var(--lightroyalblue);
 }
 
 .button {
     text-decoration: none;
     color: var(--white);
+    font-family: var(--mono);
 
-    background-color: var(--seablue);
-    padding: 0.3rem;
+    background-color: var(--royalblue);
+    padding: 0.6rem;
+
     border-radius: 4px;
 }
 .button:hover {
     color: var(--white);
 
     background-color: var(--purple);
+    background-color: var(--lightroyalblue);
 }
 
-/* intro styles */
+/* ------ intro styles ------ */
 #intro {
-    padding-borrom: 10rem;
+    padding: 4rem 1rem 10rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 #intro p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     /* don't use units of measurments, then it will be a proportion */
     line-height: 1.5;
 }
 #intro .name {
     font-family: var(--mono);
+    font-weight: 500;
 }
 .name span {
     font-family: var(--sans);
     font-size: 4rem;
     color: var(--orange);
-    letter-spacing: -0.1rem;
+    /*letter-spacing: -0.1rem;*/
 
     display: block;
 }
@@ -147,17 +179,63 @@ nav [class*="fa-"]:hover {
     font-size: 4rem;
     font-weight: normal;
 }
-#intro .tech {
-    color: var(--seablue);
-    font-weight: bold;
-    font-size: 1.1rem;
-}
 #intro .square-br {
-    color: var(--seablue);
+    color: var(--royalblue);
     font-weight: bold;
 }
 
-/* contact styles */
+/* ------ projects section ------ */
+#projects {
+    padding: 4rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+#projects h2 {
+    /*font-family: var(--mono);*/
+    font-size: 3rem;
+    margin-bottom: calc(2.5rem * 1.5);
+}
+#projects h3 {
+    color: var(--orange);
+}
+#projects h4 {
+    font-size: 1.2rem;
+    font-family: var(--mono);
+    font-weight: 500;
+    margin: 0;
+}
+.blackbox {
+    background-color: var(--black);
+    padding: 1rem;
+    border-radius: 10px;
+
+    color: var(--white);
+    font-size: 1.4rem;
+    line-height: 1.5;
+}
+#projects ul {
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+
+    font-size: 1.3rem;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+#projects img {
+    margin: 2rem 0 4rem 0;
+    padding: 1rem;
+
+    border-left: 1px solid var(--orange);
+    border-top: 1px solid var(--orange);
+    border-radius: 25px;
+}
+
+/* ------ contact section ------ */
 #contact {
     text-align: center;
     font-size: 1rem;
@@ -172,14 +250,14 @@ nav [class*="fa-"]:hover {
     margin-top: 3rem;
 }
 
-/* footer styles */
+/* ------ footer styles ------ */
 footer {
     /*   border: 1px solid orange; */
 
     width: 400px;
 
     margin: 0 auto;
-    padding: 2rem 0;
+    padding: 4rem 0;
 
     text-align: center;
     font-size: 1rem;
@@ -191,14 +269,15 @@ footer ul {
     padding: 0;
     margin: 0.5rem 0 1.5rem 0;
 
-    font-size: 2rem;
+    font-size: 3rem;
 
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     gap: 2rem;
 }
-footer a {
+footer [class*="fa-"]:hover {
+    transform: scale(105%);
     /*   border: 1px solid red; */
 }
 
@@ -208,6 +287,43 @@ footer a {
     }
     to {
         rotate: 360deg;
+    }
+}
+
+@media (min-width: 550px) {
+    article {
+        display: grid;
+        /*grid-template-columns: 1fr 1fr;*/
+        /* 10 columns the same size */
+        grid-template-columns: repeat(10, 1fr);
+        gap: 1rem;
+    }
+    #projects img {
+        grid-column: 1/6;
+        grid-row: 1/2;
+    }
+    .text {
+        grid-column: 5/11;
+        grid-row: 1/2;
+
+        order: 2;
+        text-align: right;
+    }
+    #projects ul {
+        justify-content: flex-end;
+    }
+
+    article:nth-child(odd) .text {
+        grid-column: 1/7;
+
+        order: 1;
+        text-align: left;
+    }
+    #projects article:nth-child(odd) img {
+        grid-column: 6/11;
+    }
+    #projects article:nth-child(odd) ul {
+        justify-content: flex-start;
     }
 }
 
